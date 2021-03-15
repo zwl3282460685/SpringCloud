@@ -12,6 +12,7 @@
         <module name="hystrix" />
         <module name="openfeign" />
         <module name="consumer" />
+        <module name="hello-api" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -22,6 +23,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="consumer" options="-parameters" />
       <module name="eureka" options="-parameters" />
+      <module name="hello-api" options="" />
       <module name="hystrix" options="-parameters" />
       <module name="openfegin" options="-parameters" />
       <module name="openfeign" options="-parameters" />
