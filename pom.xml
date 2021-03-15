@@ -11,5 +11,6 @@
     <modules>
         <module>commons</module>
         <module>hello-api</module>
+        <module>resilience4j</module>
     </modules>
 </project>

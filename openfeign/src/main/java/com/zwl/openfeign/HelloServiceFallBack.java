@@ -11,7 +11,7 @@ import java.io.UnsupportedEncodingException;
  * @date : 2021/3/15 16:17
  */
 @Component
-@RequestMapping("/zwl")
+//@RequestMapping("/zwl") //防止请求地址重复
 public class HelloServiceFallBack implements HelloService{
     @Override
     public String hello() {
@@ -20,7 +20,7 @@ public class HelloServiceFallBack implements HelloService{
 
     @Override
     public String hello2(String name) {
-        return "error";
+        return "error2";
     }
 
     @Override
