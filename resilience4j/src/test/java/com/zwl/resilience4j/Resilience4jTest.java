@@ -3,7 +3,6 @@ package com.zwl.resilience4j;
 import io.github.resilience4j.circuitbreaker.CircuitBreaker;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerConfig;
 import io.github.resilience4j.circuitbreaker.CircuitBreakerRegistry;
-import io.vavr.CheckedFunction0;
 import org.junit.Test;
 
 import java.time.Duration;
@@ -30,6 +29,6 @@ public class Resilience4jTest {
         CircuitBreakerRegistry r1 = CircuitBreakerRegistry.of(config);
         CircuitBreaker cb1 = r1.circuitBreaker("zwl");
         CircuitBreaker cb2 = r1.circuitBreaker("zwl2", config);
-        io.vavr.CheckedFunction0<T> supplier = CircuitBreaker.decorateCheckedSupplier(cb1, () -> "hello resilience4j");
+        io.vavr.CheckedFunction0<String> supplier = CircuitBreaker.decorateCheckedSupplier(cb1, () -> "hello resilience4j");
     }
 }
